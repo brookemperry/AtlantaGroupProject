@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Atlanta Group Project</string>
+    <string name="presentation">Name of Presentation</string>
+    <string name="date">Today\'s Date</string>
+    <string name="speaker">How would you rate the speaker\'s performance?</string>
+    <string name="visuals">How helpful were the visuals?</string>
+    <string name="useful">How useful did you find the information?</string>
+    <string name="suggestions">Type any additional comments or suggestions here.</string>
+    <string name="y">Yes</string>
+    <string name="n">No</string>
+    <string name="submit">Submit</string>
+    <string name="recomend">Would you recomend this program to a friend?</string>
 </resources>
