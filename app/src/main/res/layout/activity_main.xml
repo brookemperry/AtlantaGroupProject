@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#ffffff">
 
-    <ScrollView
+    <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="450dp">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:id="@+id/questions"
             tools:context="com.example.android.atlantagroupproject.MainActivity">
 
             <ImageView
@@ -21,33 +23,33 @@
                 android:src="@drawable/logomakr" />
 
             <EditText
+                android:id="@+id/presentationName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
                 android:layout_marginTop="16dp"
                 android:hint="@string/presentation"
-                android:inputType="text"
-                android:textSize="16sp" />
+                android:inputType="text" />
 
             <EditText
+                android:id="@+id/date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
                 android:layout_marginTop="16dp"
                 android:hint="@string/date"
-                android:inputType="date"
-                android:textSize="16sp" />
+                android:inputType="date" />
 
             <TextView
+                android:id="@+id/speaker"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
                 android:layout_marginTop="16dp"
-                android:text="@string/speaker"
-                android:textSize="16sp" />
+                android:text="@string/speaker" />
 
             <RatingBar
                 android:id="@+id/rating_bar"
@@ -60,13 +62,13 @@
                 android:stepSize="0.5" />
 
             <TextView
+                android:id="@+id/visuals"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
                 android:layout_marginTop="16dp"
-                android:text="@string/visuals"
-                android:textSize="16sp" />
+                android:text="@string/visuals" />
 
             <RatingBar
                 android:id="@+id/rating_bar2"
@@ -79,13 +81,13 @@
                 android:stepSize="0.5" />
 
             <TextView
+                android:id="@+id/useful"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
                 android:layout_marginTop="16dp"
-                android:text="@string/useful"
-                android:textSize="16sp" />
+                android:text="@string/useful" />
 
             <RatingBar
                 android:id="@+id/rating_bar3"
@@ -98,13 +100,13 @@
                 android:stepSize="0.5" />
 
             <TextView
+                android:id="@+id/recommend"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
                 android:layout_marginTop="16dp"
-                android:text="@string/recomend"
-                android:textSize="16sp" />
+                android:text="@string/recommend" />
 
             <RadioGroup
                 android:layout_width="wrap_content"
@@ -128,16 +130,16 @@
             </RadioGroup>
 
             <EditText
+                android:id="@+id/suggestions"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
                 android:layout_marginTop="16dp"
                 android:hint="@string/suggestions"
-                android:inputType="textMultiLine"
-                android:textSize="16sp" />
+                android:inputType="textMultiLine" />
         </LinearLayout>
-    </ScrollView>
+
 
     <Button
 
@@ -145,9 +147,12 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+        android:layout_below="@+id/questions"
         android:layout_marginBottom="32dp"
         android:onClick="submit"
         android:text="@string/submit" />
 
 
 </RelativeLayout>
+
+</ScrollView>
