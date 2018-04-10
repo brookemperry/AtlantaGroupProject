@@ -10,29 +10,29 @@
         android:layout_height="wrap_content">
 
         <LinearLayout
+            android:id="@+id/questions"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:id="@+id/questions"
             tools:context="com.example.android.atlantagroupproject.MainActivity">
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:contentDescription="@string/description"
-                android:paddingTop="8dp"
-                android:paddingBottom="8dp"
+                android:layout_height="@dimen/height"
                 android:layout_gravity="center_horizontal"
                 android:background="#303f9f"
+                android:contentDescription="@string/description"
+                android:paddingBottom="@dimen/padding"
+                android:paddingTop="@dimen/padding"
                 android:src="@drawable/logoconf" />
 
             <EditText
                 android:id="@+id/presentationName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_marginRight="@dimen/margin"
+                android:layout_marginTop="@dimen/margin"
                 android:hint="@string/presentation"
                 android:inputType="text" />
 
@@ -40,9 +40,9 @@
                 android:id="@+id/date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_marginRight="@dimen/margin"
+                android:layout_marginTop="@dimen/margin"
                 android:hint="@string/date"
                 android:inputType="date" />
 
@@ -50,9 +50,10 @@
                 android:id="@+id/speaker"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_marginRight="@dimen/margin"
+                android:layout_marginStart="@dimen/margin"
+                android:layout_marginTop="@dimen/margin"
                 android:text="@string/speaker" />
 
             <RatingBar
@@ -60,7 +61,7 @@
                 style="?android:attr/ratingBarStyleSmall"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
+                android:layout_marginLeft="@dimen/margin"
                 android:numStars="5"
                 android:rating="0"
                 android:stepSize="0.5"
@@ -70,9 +71,9 @@
                 android:id="@+id/visuals"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_marginRight="@dimen/margin"
+                android:layout_marginTop="@dimen/margin"
                 android:text="@string/visuals" />
 
             <RatingBar
@@ -80,7 +81,7 @@
                 style="?android:attr/ratingBarStyleSmall"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
+                android:layout_marginLeft="@dimen/margin"
                 android:numStars="5"
                 android:rating="0"
                 android:stepSize="0.5"
@@ -90,9 +91,9 @@
                 android:id="@+id/useful"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_marginRight="@dimen/margin"
+                android:layout_marginTop="@dimen/margin"
                 android:text="@string/useful" />
 
             <RatingBar
@@ -100,7 +101,8 @@
                 style="?android:attr/ratingBarStyleSmall"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_marginStart="@dimen/margin"
                 android:numStars="5"
                 android:rating="0"
                 android:stepSize="0.5" />
@@ -109,15 +111,16 @@
                 android:id="@+id/recommend"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_marginRight="@dimen/margin"
+                android:layout_marginTop="@dimen/margin"
                 android:text="@string/recommend" />
 
             <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_marginStart="@dimen/margin"
                 android:orientation="horizontal">
 
                 <RadioButton
@@ -133,32 +136,32 @@
                     android:layout_height="wrap_content"
                     android:text="@string/n"
                     android:textAppearance="?android:textAppearanceMedium" />
+
             </RadioGroup>
 
             <EditText
                 android:id="@+id/suggestions"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_marginRight="@dimen/margin"
+                android:layout_marginTop="@dimen/margin"
                 android:hint="@string/suggestions"
                 android:inputType="textMultiLine" />
+
         </LinearLayout>
 
+        <Button
 
-    <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/questions"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/button_margin"
+            android:onClick="submit"
+            android:text="@string/submit" />
 
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/questions"
-        android:layout_marginBottom="32dp"
-        android:onClick="submit"
-        android:text="@string/submit" />
-
-
-</RelativeLayout>
+    </RelativeLayout>
 
 </ScrollView>
