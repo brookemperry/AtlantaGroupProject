@@ -1,4 +1,4 @@
-package com.example.ferguson.quicksurveyapp;
+package com.example.android.atlantagroupproject;
 
 import android.os.Build;
 import android.support.annotation.RequiresApi;
@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
     private Button submitButton;
     private String str;
     int count;
-    float curRate;
+
 
 
 
@@ -98,6 +98,9 @@ public class MainActivity extends AppCompatActivity {
         if (name.equals("")) {
             Toast.makeText(getApplicationContext(), "Please type the Name of the Presentation!", Toast.LENGTH_SHORT).show();
         }
+        else{
+            editText.setText(name);
+        }
 
 
         //displays Date
@@ -106,11 +109,14 @@ public class MainActivity extends AppCompatActivity {
         if (rec.equals("")) {
             Toast.makeText(getApplicationContext(), "Please type in Today's Date!", Toast.LENGTH_SHORT).show();
         }
+        else{
+            dateText.setText(rec);
+        }
 
 
         //displays How would your rate the speaker's TextView
         textView = (TextView) findViewById(R.id.speaker);
-       String speaker = textView.getText().toString();
+        String speaker = textView.getText().toString();
         textView.setText(speaker);
 
 
@@ -203,6 +209,9 @@ public class MainActivity extends AppCompatActivity {
         String sugg = suggestText.getText().toString();
         if (sugg.equals("")) {
             Toast.makeText(getApplicationContext(), "Please type in your suggestions!", Toast.LENGTH_SHORT).show();
+        }
+        else{
+            suggestText.setText(sugg);
         }
 
 
