@@ -17,14 +17,9 @@
             tools:context="com.example.android.atlantagroupproject.MainActivity">
 
             <ImageView
-<<<<<<< HEAD
                 android:id="@+id/logo"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-=======
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/height"
->>>>>>> 209234e8f08da94dbaa6a287434d30b086e26d14
                 android:layout_gravity="center_horizontal"
                 android:background="#303f9f"
                 android:contentDescription="@string/description"
@@ -158,23 +153,8 @@
 
         </LinearLayout>
 
-<<<<<<< HEAD
-    <Button
-
-        android:id="@+id/submit_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/questions"
-        android:layout_marginBottom="32dp"
-        android:onClick="submit"
-        android:text="@string/submit" />
-
-=======
         <Button
->>>>>>> 209234e8f08da94dbaa6a287434d30b086e26d14
-
+            android:id="@+id/submit_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"

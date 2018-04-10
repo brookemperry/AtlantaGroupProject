@@ -1,4 +1,4 @@
-package com.example.ferguson.quicksurveyapp;
+package com.example.android.atlantagroupproject;
 
 import android.os.Build;
 import android.support.annotation.RequiresApi;
@@ -18,8 +18,15 @@ import android.widget.Toast;
 import java.text.DecimalFormat;
 
 public class MainActivity extends AppCompatActivity {
-
-    private ImageView imageView;
+    EditText presentationName;
+    EditText date;
+    RatingBar rating_bar;
+    RatingBar rating_bar2;
+    RatingBar rating_bar3;
+    RadioButton yes;
+    RadioButton no;
+    EditText suggestions;
+  /*  private ImageView imageView;
     private EditText editText;
     private EditText dateText;
     private TextView textView;
@@ -38,15 +45,22 @@ public class MainActivity extends AppCompatActivity {
     int count;
     float curRate;
 
-
+*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+    }
+
+    public void submit(View view) {
+        EditText presentationName = findViewById(R.id.presentationName);
+        String presentation = presentationName.getText().toString();
 
 
+    }
+/*
 
         //Initializing the views
 
@@ -67,30 +81,21 @@ public class MainActivity extends AppCompatActivity {
         suggestText = (EditText) findViewById(R.id.suggestions);
         submitButton = (Button) findViewById(R.id.submit_button);
 
-
         submitButton.setOnClickListener(new View.OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR1)
             @Override
             public void onClick(View v) {
 
-
-
-
-
             }
         });
 
-
-
         //displays Logo
         imageView = (ImageView) findViewById(R.id.logo);
-        imageView.setImageResource(R.drawable.logomakr);
+        imageView.setImageResource(R.drawable.logoconf);
         String logo= imageView.getRootView().toString();
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
             imageView.getDisplay();
         }
-
-
 
         //displays Presentation Name
         editText = (EditText) findViewById(R.id.presentationName);
@@ -208,5 +213,5 @@ public class MainActivity extends AppCompatActivity {
 
         Toast.makeText(getApplicationContext(), "Thanks "  + " for filling this survey!", Toast.LENGTH_LONG).show();
 
-    }
+    }*/
 }
